@@ -42,25 +42,25 @@ namespace sc
 		GeneralRuntimeException(const char* type_name = "Exception", uint16_t call_offset = 1) : m_trace_holder(cpptrace::generate_raw_trace(call_offset + 1, 0xFF)), m_typename(type_name)
 		{};
 
-		virtual ~GeneralRuntimeException() = default;
+		~GeneralRuntimeException() = default;
 
 	public:
-		virtual const char* type() const noexcept
+		const char* type() const noexcept
 		{
 			return m_typename;
 		}
 
-		virtual const char* what() const noexcept
+		const char* what() const noexcept
 		{
 			return m_message.c_str();
 		};
 
-		virtual cpptrace::stacktrace& trace() const noexcept
+		cpptrace::stacktrace& trace() const noexcept
 		{
 			return m_trace_holder.get_resolved_trace();
 		}
 
-		virtual const char* message() const noexcept
+		const char* message() const noexcept
 		{
 			if (m_trace_message.empty())
 			{

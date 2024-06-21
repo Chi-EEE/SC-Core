@@ -10,7 +10,7 @@ namespace sc
 	{
 	public:
 		Image() = default;
-		virtual ~Image() = default;
+		~Image() = default;
 
 	public:
 		enum class BasePixelType : uint8_t
@@ -87,8 +87,8 @@ namespace sc
 		virtual void write(Stream& buffer) = 0;
 
 	public:
-		virtual uint16_t width() const;
-		virtual uint16_t height() const;
+		uint16_t width() const;
+		uint16_t height() const;
 
 		virtual BasePixelType base_type() const = 0;
 		virtual ColorSpace colorspace() const = 0;
