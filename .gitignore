@@ -4,3 +4,5 @@
 *.sln
 /build
 /android_build
+.xmake
+compile_commands.json
