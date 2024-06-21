@@ -7,7 +7,7 @@ namespace sc
 	{
 	public:
 		CompressedImage() = default;
-		virtual ~CompressedImage() = default;
+		~CompressedImage() = default;
 
 	public:
 		virtual size_t decompressed_data_length() = 0;

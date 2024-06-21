@@ -21,7 +21,7 @@ namespace sc
 		Stream(const Stream&) = delete;
 		Stream& operator=(const Stream&) = delete;
 
-		virtual ~Stream() = default;
+		~Stream() = default;
 
 	public:
 		virtual void* data() = 0;

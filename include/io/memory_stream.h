@@ -25,7 +25,7 @@ namespace sc
 			m_length = length;
 		};
 
-		virtual ~MemoryStream()
+		~MemoryStream()
 		{
 			if (m_allocated_data)
 			{

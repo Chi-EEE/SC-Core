@@ -21,17 +21,17 @@ namespace sc
 			Image::ColorSpace space = Image::ColorSpace::Linear
 		);
 
-		virtual ~RawImage();
+		~RawImage();
 
 	public:
-		virtual size_t data_length() const;
-		virtual uint8_t* data() const;
+		size_t data_length() const;
+		uint8_t* data() const;
 
-		virtual BasePixelType base_type() const;
-		virtual ColorSpace colorspace() const;
-		virtual PixelDepth depth() const;
+		BasePixelType base_type() const;
+		ColorSpace colorspace() const;
+		PixelDepth depth() const;
 
-		virtual bool is_compressed() const
+		bool is_compressed() const
 		{
 			return false;
 		};

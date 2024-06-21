@@ -19,7 +19,7 @@ namespace sc
 			m_buffer.resize(capacity);
 		};
 
-		virtual ~BufferStream() = default;
+		~BufferStream() = default;
 
 	public:
 		void* data() const

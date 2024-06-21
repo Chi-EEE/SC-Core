@@ -28,7 +28,7 @@ namespace sc
 			m_file_size = static_cast<size_t>(m_file.tellg());
 			m_file.seekg(0);
 		};
-		virtual ~InputFileStream()
+		~InputFileStream()
 		{
 			if (m_data)
 			{
@@ -135,7 +135,7 @@ namespace sc
 			m_file_size = static_cast<size_t>(m_file.tellp());
 			m_file.seekp(0);
 		};
-		virtual ~OutputFileStream() = default;
+		~OutputFileStream() = default;
 
 	public:
 		void* data() override
